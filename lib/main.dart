@@ -43,24 +43,79 @@ class _MyHomePageState extends State<MyHomePage> {
       appBar: AppBar(
         title: Text(widget.title),
       ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            const Text(
-              'You have pushed the button this many times:',
+      body: GridView.count(
+        crossAxisCount: 3,
+        children: [
+          Container(
+            padding: const EdgeInsets.all(5.0),
+            margin: const EdgeInsets.all(5.0),
+            decoration: BoxDecoration(
+                border: Border.all(color: Colors.cyan),
+                borderRadius: BorderRadius.circular(10)),
+            child: Center(
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: <Widget>[
+                  const Text(
+                    'You have pushed the button this many times:',
+                  ),
+                  Text(
+                    '$_counter',
+                    style: Theme.of(context).textTheme.headlineMedium,
+                  ),
+                  OutlinedButton(
+                      onPressed: _incrementCounter, child: Text('click here'))
+                ],
+              ),
             ),
-            Text(
-              '$_counter',
-              style: Theme.of(context).textTheme.headlineMedium,
+          ),
+          Container(
+            padding: const EdgeInsets.all(5.0),
+            margin: const EdgeInsets.all(5.0),
+            decoration: BoxDecoration(
+                border: Border.all(color: Colors.cyan),
+                borderRadius: BorderRadius.circular(10)),
+            child: Center(
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: <Widget>[
+                  const Text(
+                    'You have pushed the button this many times:',
+                  ),
+                  Text(
+                    '$_counter',
+                    style: Theme.of(context).textTheme.headlineMedium,
+                  ),
+                  OutlinedButton(
+                      onPressed: _incrementCounter, child: Text('click here'))
+                ],
+              ),
             ),
-          ],
-        ),
-      ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
-        tooltip: 'Increment',
-        child: const Icon(Icons.add),
+          ),
+          Container(
+            padding: const EdgeInsets.all(5.0),
+            margin: const EdgeInsets.all(5.0),
+            decoration: BoxDecoration(
+                border: Border.all(color: Colors.cyan),
+                borderRadius: BorderRadius.circular(10)),
+            child: Center(
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: <Widget>[
+                  const Text(
+                    'You have pushed the button this many times:',
+                  ),
+                  Text(
+                    '$_counter',
+                    style: Theme.of(context).textTheme.headlineMedium,
+                  ),
+                  OutlinedButton(
+                      onPressed: _incrementCounter, child: Text('click here'))
+                ],
+              ),
+            ),
+          )
+        ],
       ),
     );
   }
