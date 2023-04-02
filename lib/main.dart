@@ -37,6 +37,10 @@ class _MyHomePageState extends State<MyHomePage> {
     });
   }
 
+  void _callAsn1() {
+    increment(1);
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -64,7 +68,8 @@ class _MyHomePageState extends State<MyHomePage> {
                     style: Theme.of(context).textTheme.headlineMedium,
                   ),
                   OutlinedButton(
-                      onPressed: _incrementCounter, child: Text('click here'))
+                      onPressed: _incrementCounter,
+                      child: const Text('click here'))
                 ],
               ),
             ),
@@ -87,7 +92,7 @@ class _MyHomePageState extends State<MyHomePage> {
                     style: Theme.of(context).textTheme.headlineMedium,
                   ),
                   OutlinedButton(
-                      onPressed: _incrementCounter, child: Text('click here'))
+                      onPressed: _callAsn1, child: const Text('click here'))
                 ],
               ),
             ),
@@ -110,7 +115,8 @@ class _MyHomePageState extends State<MyHomePage> {
                     style: Theme.of(context).textTheme.headlineMedium,
                   ),
                   OutlinedButton(
-                      onPressed: _incrementCounter, child: Text('click here'))
+                      onPressed: _incrementCounter,
+                      child: const Text('click here'))
                 ],
               ),
             ),
